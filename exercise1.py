@@ -1,4 +1,4 @@
-def find_min(a, key=lambda x: x[3]):
+def find_min(a, key=lambda x: x[0]):
     if not a:
         raise ValueError("List is empty")
     minimum= a[0]
