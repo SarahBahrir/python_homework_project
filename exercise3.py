@@ -58,6 +58,27 @@ def max_heapify(arr, i, heap_size, key=lambda x: x):
         max_heapify(arr, largest, heap_size, key)
 
 
+#6
+def build_max_heap(arr, key=lambda x: x):
+    n = len(arr)
+    for i in range(n // 2 - 1, -1, -1):
+        max_heapify(arr, i, n, key=key)
+
+
+
+#7
+def heap_sort(arr, key=lambda x: x):
+    n = len(arr)
+    build_max_heap(arr, key=key)
+
+
+    for end in range(n - 1, 0, -1):
+        arr[0], arr[end] = arr[end], arr[0]
+        max_heapify(arr, 0, end, key=key)
+
+
+
+#המשך תשובות בקובץ וורד
 
 
 
